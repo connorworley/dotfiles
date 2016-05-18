@@ -1,1 +1,7 @@
-/Users/worley/.gitconfig
+[user]
+	name = Connor Worley
+	email = connorbworley@gmail.com
+[core]
+	excludesfile = /Users/worley/.gitignore_global
+[credential]
+	helper = lastpass
