@@ -12,9 +12,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export EDITOR="emacs"
 export PATH=$PATH:/usr/local/sbin:~/.bin
-export PROMPT="%{$fg_bold[green]%}%c %{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}"
+export PROMPT='%{$fg_bold[green]%}%c %{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 if [[ -n "$SSH_TTY" ]]; then
-   export PROMPT="%{$fg_bold[red]%}$USER@$HOST:%{$fg_bold[green]%}%c %{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}"
+   export PROMPT='%{$fg_bold[red]%}$USER@$HOST:%{$fg_bold[green]%}%c %{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 fi
 
 eval "$(thefuck --alias)"
