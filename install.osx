@@ -6,4 +6,5 @@ brew install emacs \
 	     p7zip \
 	     thefuck
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo "source .zshrc.osx" > .zshrc
+echo "source .zshrc.common" > .zshrc
+echo "source .zshrc.osx" >> .zshrc
