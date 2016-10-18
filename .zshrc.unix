@@ -1,7 +1,0 @@
-# oh-my-zsh
-plugins=(git
-	 colored-man-pages
-	 rand-quote
-	 nyan)
-ZSH_THEME="nichi"
-source $ZSH/oh-my-zsh.sh
