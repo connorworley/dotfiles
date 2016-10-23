@@ -1,5 +1,5 @@
-# dotfiles-and-utilities
-Installs my configs + some utilities.
+# .files
+My configs + some utilities.
 ## Utilities
 ### brew-autoremove
 A manual autoremove for brew.
