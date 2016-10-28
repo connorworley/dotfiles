@@ -3,6 +3,10 @@ function rehash
   source ~/.config/fish/conf.d/*.fish
 end
 
+function emacs
+  command emacs "-nw $argv"
+end
+
 function fish_prompt
   echo -n (date "+[%H:%M:%S]")' '
   if [ "$SSH_TTY" ]
