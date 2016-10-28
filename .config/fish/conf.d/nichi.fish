@@ -3,8 +3,10 @@ function rehash
   source ~/.config/fish/conf.d/*.fish
 end
 
+set -U fish_user_paths $fish_user_paths ~/.bin
+
 function emacs
-  command emacs "-nw $argv"
+  command emacs "-nw" "$argv"
 end
 
 function fish_prompt
@@ -78,3 +80,4 @@ set -x LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'cyan')
 set -x LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'green')
 # directory writable to others, without sticky bit 
 set -x LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'yellow')
+
