@@ -2,7 +2,7 @@
   name = Connor Worley
   email = connorbworley@gmail.com
 [core]
-  excludesfile = /Users/worley/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [branch]
   autosetuprebase = always
 [credential]
