@@ -1,9 +1,11 @@
 [user]
-	name = Connor Worley
-	email = connorbworley@gmail.com
+  name = Connor Worley
+  email = connorbworley@gmail.com
 [core]
-	excludesfile = /Users/worley/.gitignore_global
+  excludesfile = /Users/worley/.gitignore_global
+[branch]
+  branch.autosetuprebase = always
 [credential]
-	helper = convert-to-ssh
-	helper = lastpass
+  helper = convert-to-ssh
+  helper = lastpass
 

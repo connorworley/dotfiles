@@ -22,8 +22,9 @@
 ; generic things
 (menu-bar-mode -1)
 (defalias 'yes-or-no-p 'y-or-n-p)
-(setq tab-width 2)
-(setq indent-tabs-mode nil)
+(setq-default tab-width 2
+	      c-basic-offset 2
+	      indent-tabs-mode nil)
 
 ; moe-theme
 (my/autorequire 'moe-theme)
