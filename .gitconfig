@@ -4,7 +4,7 @@
 [core]
   excludesfile = /Users/worley/.gitignore_global
 [branch]
-  branch.autosetuprebase = always
+  autosetuprebase = always
 [credential]
   helper = convert-to-ssh
   helper = lastpass
