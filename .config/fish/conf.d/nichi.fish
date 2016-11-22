@@ -3,6 +3,9 @@ function rehash
   source ~/.config/fish/conf.d/*.fish
 end
 
+function fish_greeting
+end
+
 set -U fish_user_paths $fish_user_paths ~/.bin
 
 function emacs
