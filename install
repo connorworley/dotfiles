@@ -11,4 +11,4 @@ find . -type f \
        -not -path './.git/*' \
        -not -path './README.md' \
        -not -path './install' | \
-xargs -I{} -- ln -s "$DIR/{}" "$HOME/{}"
+xargs -I{} -- ln -sv "$DIR/{}" "$HOME/{}"
