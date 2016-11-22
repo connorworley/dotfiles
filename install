@@ -3,7 +3,7 @@ find . -type f \
        -not -path './.git/*' \
        -not -path './README.md' \
        -not -path './install' | \
-xargs dirname | \
+xargs -I{} -- dirname "{}" | \
 sort -u | \
 xargs -I{} -- mkdir -pv "$HOME/{}"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
