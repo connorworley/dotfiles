@@ -4,7 +4,6 @@ find . -type f \
        -not -path './README.md' \
        -not -path './install' | \
 xargs -I{} -- dirname "{}" | \
-sort -u | \
 xargs -I{} -- mkdir -pv "$HOME/{}"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 find . -type f \
