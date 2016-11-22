@@ -1,0 +1,9 @@
+[Unit]
+Descritpion=Emacs Server user servie
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/emacs --daemon
+
+[Install]
+WantedBy=default.target

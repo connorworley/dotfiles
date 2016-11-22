@@ -9,7 +9,7 @@ end
 set -U fish_user_paths $fish_user_paths ~/.bin
 
 function emacs
-  command emacs "-nw" "$argv"
+  command emacsclient "--alternate-editor=emacs" "$argv"
 end
 
 function fish_prompt
