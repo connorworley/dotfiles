@@ -26,28 +26,25 @@ function ls_color_bold
   echo (ls_color "$argv" | awk '{print toupper($0)}')
 end
 
-function ls
-  # directory
-  set LSCOLORS (ls_color_bold 'blue')(ls_color 'normal')
-  # symlink
-  set LSCOLORS $LSCOLORS(ls_color_bold 'cyan')(ls_color 'normal')
-  # socket
-  set LSCOLORS $LSCOLORS(ls_color 'magenta')(ls_color 'normal')
-  # pipe
-  set LSCOLORS $LSCOLORS(ls_color 'black')(ls_color_bold 'light grey')
-  # executable
-  set LSCOLORS $LSCOLORS(ls_color_bold 'red')(ls_color 'normal')
-  # block
-  set LSCOLORS $LSCOLORS(ls_color_bold 'green')(ls_color 'normal')
-  # character
-  set LSCOLORS $LSCOLORS(ls_color_bold 'yellow')(ls_color 'normal')
-  # executable with setuid bit set
-  set LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'red')
-  # executable with setgid bit set
-  set LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'cyan')
-  # directory writable to others, with sticky bit
-  set LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'green')
-  # directory writable to others, without sticky bit 
-  set LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'yellow')
-  command ls $argv
-end
+# directory
+set -x LSCOLORS (ls_color_bold 'blue')(ls_color 'normal')
+# symlink
+set -x LSCOLORS $LSCOLORS(ls_color_bold 'cyan')(ls_color 'normal')
+# socket
+set -x LSCOLORS $LSCOLORS(ls_color 'magenta')(ls_color 'normal')
+# pipe
+set -x LSCOLORS $LSCOLORS(ls_color 'black')(ls_color_bold 'light grey')
+# executable
+set -x LSCOLORS $LSCOLORS(ls_color_bold 'red')(ls_color 'normal')
+# block
+set -x LSCOLORS $LSCOLORS(ls_color_bold 'green')(ls_color 'normal')
+# character
+set -x LSCOLORS $LSCOLORS(ls_color_bold 'yellow')(ls_color 'normal')
+# executable with set -xuid bit set -x
+set -x LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'red')
+# executable with set -xgid bit set -x
+set -x LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'cyan')
+# directory writable to others, with sticky bit
+set -x LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'green')
+# directory writable to others, without sticky bit 
+set -x LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'yellow')
