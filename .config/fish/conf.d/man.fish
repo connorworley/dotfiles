@@ -6,5 +6,5 @@ function man
   set LESS_TERMCAP_so (set_color --background blue yellow)
   set LESS_TERMCAP_ue (set_color normal)
   set LESS_TERMCAP_us (set_color --bold green)
-  command man "$argv"
+  command man $argv
 end

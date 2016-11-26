@@ -49,5 +49,5 @@ function ls
   set LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'green')
   # directory writable to others, without sticky bit 
   set LSCOLORS $LSCOLORS(ls_color 'black')(ls_color 'yellow')
-  command ls "$argv"
+  command ls $argv
 end
