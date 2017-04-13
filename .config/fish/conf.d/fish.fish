@@ -1,4 +1,3 @@
-# Command to quickly reload config
 set -U fish_user_paths $fish_user_paths ~/.bin
 
 function fish_prompt
