@@ -3,6 +3,7 @@
   email = connorbworley@gmail.com
 [core]
   excludesfile = ~/.gitignore_global
+  editor = emacs
 [branch]
   autosetuprebase = always
 [credential]
