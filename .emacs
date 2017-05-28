@@ -19,6 +19,11 @@
       `((".*", "~/.emacs.d/backups/" t)))
 (setq backup-by-copying t)
 
+; custom file
+(setq custom-file "~/.emacs.d/custom.el")
+(when (file-exists-p custom-file)
+  (load custom-file))
+
 ; generic things
 (menu-bar-mode -1)
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -57,26 +62,12 @@
 (setq ac-auto-show-menu t)
 (ac-config-default)
 
-; jedi
-;(my/autorequire 'jedi)
-;(add-hook 'python-mode-hook 'jedi:setup)
-;(setq jedi:complete-on-dot t)
-
 ; flycheck
 (my/autorequire 'flycheck)
 (add-hook 'after-init-hook 'global-flycheck-mode)
 (global-set-key [(control b)] 'flycheck-list-errors)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (rust-mode flycheck jedi auto-complete smex moe-theme))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+; language modes
+(my/autorequire 'fish-mode)
+(my/autorequire 'rust-mode)
+(my/autorequire 'kotlin-mode)
