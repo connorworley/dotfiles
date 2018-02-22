@@ -5,5 +5,5 @@
   editor = emacs
   excludesFile = ~/.gitignore_global
   splitIndex = true
-[branch]
-  autoSetupRebase = always
+[pull]
+  rebase = true
