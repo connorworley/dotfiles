@@ -27,9 +27,6 @@
 ; generic things
 (menu-bar-mode -1)
 (defalias 'yes-or-no-p 'y-or-n-p)
-(setq-default tab-width 2
-	      c-basic-offset 2
-	      indent-tabs-mode nil)
 
 ; moe-theme
 (my/autorequire 'moe-theme)
@@ -62,12 +59,18 @@
 (setq ac-auto-show-menu t)
 (ac-config-default)
 
-; flycheck
-(my/autorequire 'flycheck)
-(add-hook 'after-init-hook 'global-flycheck-mode)
-(global-set-key [(control b)] 'flycheck-list-errors)
-
 ; language modes
 (my/autorequire 'fish-mode)
 (my/autorequire 'rust-mode)
 (my/autorequire 'kotlin-mode)
+
+; whitespace
+(defun my/whitespace ()
+  (setq-default indent-tabs-mode nil)
+  (setq-default tab-width 2
+                c-basic-offset 'tab-width
+                javascript-indent-level 'tab-width
+                js-indent-level 'tab-width
+                js2-basic-offset 'tab-width))
+
+(add-hook 'prog-mode-hook 'my/whitespace)
