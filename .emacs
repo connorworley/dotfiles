@@ -63,15 +63,17 @@
 (my/autorequire 'fish-mode)
 (my/autorequire 'rust-mode)
 (my/autorequire 'kotlin-mode)
+(my/autorequire 'typescript-mode)
+(my/autorequire 'vue-mode)
 
 ; whitespace
 (defun my/whitespace ()
-  (setq indent-tabs-mode nil)
-  (setq tab-width 2
-                c-basic-offset 'tab-width
-                javascript-indent-level 'tab-width
-                js-indent-level 'tab-width
-                js2-basic-offset 'tab-width
-                typescript-indent-level 'tab-width))
+  (setq-default indent-tabs-mode nil)
+  (setq-default tab-width 2
+                c-basic-offset tab-width
+                javascript-indent-level tab-width
+                js-indent-level tab-width
+                js2-basic-offset tab-width
+                typescript-indent-level tab-width))
 
 (add-hook 'prog-mode-hook 'my/whitespace)
