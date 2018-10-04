@@ -1,5 +1,5 @@
 # .files
-My configs + some utilities.
+~My configs + some utilities.~ I don't use these dotfiles anymore. I might upload my current configuration if I have time to clear out work-stuffs.
 ## Utilities
 ### brew-autoremove
 A manual autoremove for brew.
